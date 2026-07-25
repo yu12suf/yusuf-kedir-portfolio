@@ -51,7 +51,7 @@ circles.forEach(elem=>{
 
 
     for(let i = 0 ; i < dots ; i++){
-        points += '<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>';    
+        points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;    
     }
     elem.innerHTML = points;
     const pointsMarked = elem.querySelectorAll('.points');
@@ -117,3 +117,74 @@ scrollBottom.forEach((el)=>observer.observe(el));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el)=>observer.observe(el));
+
+// Contact form submission with confirmation
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+const submitBtn = document.getElementById("submit-btn");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        // Show loading state
+        submitBtn.textContent = "Sending...";
+        submitBtn.disabled = true;
+        formStatus.className = "form-status";
+        formStatus.textContent = "";
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json",
+                },
+            });
+
+            if (response.ok) {
+                formStatus.className = "form-status success";
+                formStatus.innerHTML = `
+                    <i class='bx bx-check-circle'></i>
+                    <span>Thank you! Your message has been sent successfully. I'll get back to you soon.</span>
+                `;
+                contactForm.reset();
+            } else {
+                const data = await response.json();
+                if (Object.hasOwn(data, "errors")) {
+                    formStatus.className = "form-status error";
+                    formStatus.innerHTML = `
+                        <i class='bx bx-error-circle'></i>
+                        <span>${data.errors.map((err) => err.message).join(", ")}</span>
+                    `;
+                } else {
+                    throw new Error("Form submission failed");
+                }
+            }
+        } catch (error) {
+            formStatus.className = "form-status error";
+            formStatus.innerHTML = `
+                <i class='bx bx-error-circle'></i>
+                <span>Oops! Something went wrong. Please try again or email me directly at yuusufkadiir258@gmail.com</span>
+            `;
+        }
+
+        // Reset button
+        submitBtn.textContent = "Send Message";
+        submitBtn.disabled = false;
+
+        // Auto-hide success message after 8 seconds
+        if (formStatus.classList.contains("success")) {
+            setTimeout(() => {
+                formStatus.style.opacity = "0";
+                setTimeout(() => {
+                    formStatus.className = "form-status";
+                    formStatus.innerHTML = "";
+                    formStatus.style.opacity = "1";
+                }, 500);
+            }, 8000);
+        }
+    });
+}
