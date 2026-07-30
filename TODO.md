@@ -1,63 +1,70 @@
-# Portfolio Update Plan - Yusuf Kedir
+# Responsive Design TODO
 
-## Information Summary
+## ✅ All Steps Completed
 
-- **Name**: Yusuf Kedir
-- **Education**: Haramaya University, BSc in Software Engineering (Graduated 2018 EC)
-- **CGPA**: 3.85/4.00
-- **Exit Exam**: 86.25%
-- **Phone**: +251921659613
-- **Email**: yuusufkadiir258@gmail.com
-- **Projects**: 8 software engineering projects
-- **Tech Stack**: Next.js, React, TypeScript, Node.js, PHP, Python, Django, MongoDB, MySQL, etc.
+### 1. Fixed-Width Elements
 
----
+- [x] `.info-box` (400px → max-width: 400px; width: 100%)
+- [x] `.btn-box` (420px → max-width: 420px; width: 100%)
+- [x] `.social-icons` (220px → max-width: 220px; width: 100%)
 
-## ✅ Completed Changes
+### 2. Breakpoint: 991px
 
-### ✅ Step 1: `index.html` - Home Section
+- [x] Reduced info-box, btn-box max-widths
 
-- Title: "Yusuf Kedir || Software Engineer Portfolio"
-- Name: "Yusuf Kedir"
-- Roles: Software Engineer, Full-Stack Developer, AI/ML Enthusiast, Problem Solver
-- Description: Highlights Haramaya University, CGPA 3.85, Exit Exam 86.25%
-- Email & Phone contact info
-- Social links: GitHub, LinkedIn, Twitter, Instagram
-- Download CV redirects to #contact
+### 3. Breakpoint: 768px
 
-### ✅ Step 2: `index.html` - About Section
+- [x] About badges smaller (75px)
+- [x] Info-box wraps with gap
+- [x] Btn-box wraps with gap, auto height
+- [x] Social icons reduced (200px, 42px icons)
+- [x] Service boxes full width (max 400px)
+- [x] Service icons smaller (2.5rem)
+- [x] Circle skills adjusted (100px, translateY -38px)
+- [x] Professional skills 2-col centered (max 400px)
+- [x] Portfolio gallery min-width 240px
+- [x] Contact form full width with padding
+- [x] Footer column layout
 
-- Real story about Haramaya University graduation
-- Stats: CGPA 3.85, Exit Exam 86.25%, 8+ Projects Built
-- Three paragraphs covering academic journey, projects, and passion
+### 4. Breakpoint: 600px
 
-### ✅ Step 3: `index.html` - Services Section
+- [x] Font sizes reduced (—big-font: 2rem, —normal-font: 1.6rem)
+- [x] Info-box stack vertically, align left
+- [x] Btn-box column layout, buttons full width
+- [x] Social icons margin-top reduced (3rem)
+- [x] Image sizes reduced (280px, 260px)
+- [x] About badges smaller (65px)
+- [x] Professional skills single column (max 300px)
+- [x] Portfolio gallery single column (max 400px)
+- [x] Circle points smaller (4px, translateY -34px)
 
-- 4 services: Full-Stack Web Development, AI/ML Solutions, Database Design & Architecture, Secure System Development
-- Real software engineering services with proper descriptions
+### 5. Breakpoint: 480px
 
-### ✅ Step 4: `index.html` - Skills Section
+- [x] HTML font-size 85%
+- [x] Font sizes reduced further
+- [x] About badges hidden (display: none)
+- [x] Buttons full width 100%
+- [x] Social icons smaller (180px, 36px)
+- [x] Liquid shape 60% width
+- [x] Service icons 1.8rem
+- [x] Filter buttons wrap with gap
+- [x] Footer column layout finalized
 
-- Technical Skills: HTML & CSS (90%), JavaScript/TypeScript (85%), React/Next.js (80%), Node.js/Express (78%), Python/Django (75%), PHP/MySQL (72%), MongoDB/Redis (70%)
-- Professional Skills: Teamwork, Creativity, Project Management, Communication
+### 6. Breakpoint: 380px
 
-### ✅ Step 5: `index.html` - Portfolio Section
+- [x] HTML font-size 75%
+- [x] All sections further minimized
+- [x] Images 180px max
+- [x] Circles 75px, points 3px
+- [x] Portfolio border-radius 10px
+- [x] Contact inputs minimized
 
-- 6 real projects with descriptions and tech stacks
-- Filter categories: All, Full-Stack, AI/ML, Backend
-- Projects: Educational Adventure Pathway, Harar City Land Management, Ethiopian-UniConnect, Educity, University Management System, E-Commerce
+### 7. Breakpoint: 320px
 
-### ✅ Step 6: `index.html` - Footer & Contact
-
-- Footer: "Copyright © 2024 by Yusuf Kedir || Software Engineer"
-
-### ✅ Step 7: `style.css` - CSS Updates
-
-- Added skill bar classes for python, php, mongodb
-- Added keyframe animations for python, php, mongodb
-- Updated HTML/CSS bar width to 90%, Figma to 85%, CSS to 78%
-- Updated keyframe destination values accordingly
-
-### ✅ Step 8: `script.js` - No changes needed
-
-- The text animation and skill circle scripts work dynamically with the updated HTML
+- [x] HTML font-size 70%
+- [x] Extreme minimalist sizing
+- [x] Logo 20px
+- [x] Images 150px max
+- [x] Social icons 150px, 30px icons
+- [x] Circles 65px, points translateY -24px
+- [x] All elements fully responsive

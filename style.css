@@ -168,7 +168,8 @@ section{
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     margin: 1rem 0 2rem;
 }
 
@@ -185,7 +186,8 @@ section{
 .btn-box{
     display: flex;
     justify-content: space-between;
-    width: 420px;
+    max-width: 420px;
+    width: 100%;
     height: 45px;
 }
 .btn-box .btn{
@@ -240,7 +242,8 @@ section{
     margin-top: 8rem;
     display: flex;
     justify-content: space-between;
-    width: 220px;
+    max-width: 220px;
+    width: 100%;
     height: 40px;
 }
 .social-icons a{
@@ -890,6 +893,12 @@ footer a i{
     .social-icons{
         margin-top: 2rem;
     }
+    .info-box{
+        max-width: 350px;
+    }
+    .btn-box{
+        max-width: 370px;
+    }
 }
 
 
@@ -935,7 +944,6 @@ footer a i{
     .about{
         flex-direction: column-reverse;
     }
-
     .skill-main{
         grid-template-columns: 1fr;
     }
@@ -945,26 +953,600 @@ footer a i{
     footer p{
         font-size: .8rem;
     }
-
+    .about .img-about img{
+        max-width: 320px;
+    }
+    .info-about1,
+    .info-about2,
+    .info-about3{
+        width: 75px;
+        height: 75px;
+        padding: 8px;
+        font-size: .45rem;
+    }
+    .info-about1{
+        left: 5%;
+        top: 30%;
+    }
+    .info-about2{
+        left: 60%;
+        top: 12%;
+    }
+    .info-about3{
+        left: 55%;
+        top: 65%;
+    }
+    .info-box{
+        max-width: 100%;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .btn-box{
+        max-width: 100%;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        height: auto;
+    }
+    .btn-box .btn{
+        width: 140px;
+    }
+    .social-icons{
+        max-width: 200px;
+    }
+    .social-icons a{
+        width: 42px;
+    }
+    .social-icons a i{
+        font-size: 1.2rem;
+    }
+    .section-services .service-box{
+        flex: 1 1 100%;
+        max-width: 400px;
+    }
+    .service-icon{
+        font-size: 2.5rem;
+        padding: 1.5rem;
+    }
+    .circle{
+        height: 100px;
+    }
+    .circle .points{
+        transform: rotate(calc(var(--i)*var(--rot))) translateY(-38px);
+    }
+    .professional{
+        grid-template-columns: 1fr 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .portfolio-gallery{
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+    .contact form{
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    footer{
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
 }
-@media(max-width:420px){
+@media(max-width:600px){
+    :root{
+        --big-font: 2rem;
+        --normal-font: 1.6rem;
+    }
+    .home{
+        grid-gap: 2em;
+    }
+    .home-content h1{
+        font-size: var(--big-font);
+    }
+    .change-text{
+        font-size: 1.2rem;
+    }
+    .home-content p{
+        font-size: .9rem;
+    }
+    .info-box{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    .info-box h5{
+        font-size: .9rem;
+    }
+    .info-box span{
+        font-size: .8rem;
+    }
+    .btn-box{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        height: auto;
+    }
+    .btn-box .btn{
+        width: 100%;
+        max-width: 200px;
+    }
+    .social-icons{
+        margin-top: 3rem;
+    }
+    .img-box img{
+        max-width: 280px;
+    }
+    .liquid-shape{
+        width: 70%;
+        left: 15%;
+        top: 10%;
+    }
+    .about .img-about img{
+        max-width: 260px;
+    }
+    .info-about1,
+    .info-about2,
+    .info-about3{
+        width: 65px;
+        height: 65px;
+        padding: 6px;
+        font-size: .4rem;
+    }
+    .info-about1 span,
+    .info-about2 span,
+    .info-about3 span{
+        font-size: .85rem;
+    }
+    .about-content h3{
+        font-size: 1.2rem;
+    }
+    .about-content p{
+        font-size: .9rem;
+    }
+    .section-services .service-box{
+        padding: 1.5rem 1rem;
+    }
+    .service-box h3{
+        font-size: 1.2rem;
+    }
+    .service-box p{
+        font-size: .85rem;
+    }
+    .service-icon{
+        font-size: 2rem;
+        padding: 1.2rem;
+    }
+    .skill-main h3{
+        font-size: 1.3rem;
+    }
+    .professional{
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+    .circle{
+        height: 90px;
+    }
+    .circle .points{
+        width: 4px;
+        height: 8px;
+        transform: rotate(calc(var(--i)*var(--rot))) translateY(-34px);
+    }
+    .filter-buttons .button{
+        font-size: .8rem;
+        margin-left: .8rem;
+    }
+    .port-content h3{
+        font-size: 1.2rem;
+    }
+    .port-content p{
+        font-size: .75rem;
+    }
+    .port-content a{
+        width: 40px;
+        height: 40px;
+    }
+    .port-content a i{
+        font-size: 1.1rem;
+    }
+    .portfolio-gallery{
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .contact form input,
+    .contact form textarea{
+        padding: .6rem;
+        font-size: .9rem;
+    }
+    .formBtn .btn{
+        font-size: .9rem;
+        width: 100%;
+        max-width: 200px;
+    }
+    footer p{
+        font-size: .75rem;
+    }
+}
+@media(max-width:480px){
     html{
-        font-size: 80%;
+        font-size: 85%;
+    }
+    :root{
+        --big-font: 1.8rem;
+        --normal-font: 1.4rem;
+    }
+    header{
+        padding: 12px 4%;
+    }
+    section{
+        padding: 40px 4%;
+    }
+    .home-content{
+        margin-top: 3rem;
+    }
+    .home-content h1{
+        font-size: var(--big-font);
+    }
+    .change-text{
+        font-size: 1rem;
+    }
+    .home-content p{
+        font-size: .85rem;
+        line-height: 1.5;
+    }
+    .btn-box .btn{
+        max-width: 100%;
+        width: 100%;
+        height: 40px;
+        font-size: .9rem;
+    }
+    .social-icons{
+        max-width: 180px;
+        height: 35px;
+    }
+    .social-icons a{
+        width: 36px;
+    }
+    .social-icons a i{
+        font-size: 1rem;
+    }
+    .img-box img{
+        max-width: 220px;
+    }
+    .liquid-shape{
+        width: 60%;
+        left: 20%;
+        top: 8%;
+    }
+    .about .img-about img{
+        max-width: 220px;
+    }
+    .info-about1,
+    .info-about2,
+    .info-about3{
+        display: none;
+    }
+    .about-content h2{
+        font-size: var(--normal-font);
+    }
+    .about-content h3{
+        font-size: 1.1rem;
+    }
+    .about-content p{
+        font-size: .85rem;
+        margin-bottom: 1rem;
+    }
+    .main-text h2{
+        font-size: var(--normal-font);
+    }
+    .main-text span{
+        font-size: .7rem;
+    }
+    .service-icon{
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+    .service-box h3{
+        font-size: 1.1rem;
+    }
+    .service-box p{
+        font-size: .8rem;
+    }
+    .section-services .service-box{
+        flex: 1 1 100%;
+        padding: 1.2rem 0.8rem;
+    }
+    .skill-left .skill-bar .info p{
+        font-size: .85rem;
+    }
+    .skill-bar{
+        margin-bottom: 1.5rem;
+    }
+    .filter-buttons{
+        margin: 1.5rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .filter-buttons .button{
+        margin: 0;
+        font-size: .75rem;
+        padding: 4px 10px;
+    }
+    .portfolio-gallery{
+        gap: 1rem;
+    }
+    .port-content{
+        padding: 0 1rem;
+    }
+    .port-content h3{
+        font-size: 1rem;
+    }
+    .port-content p{
+        font-size: .7rem;
+        margin: 3px 0 10px 0;
+    }
+    .contact form{
+        padding: 0 0.5rem;
+    }
+    .contact form input,
+    .contact form textarea{
+        padding: .5rem;
+        font-size: .85rem;
+    }
+    .formBtn .btn{
+        font-size: .85rem;
+        height: 40px;
+    }
+    footer{
+        padding: 1rem 4%;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    footer p{
+        font-size: .65rem;
+    }
+    footer a{
+        padding: .4rem;
+    }
+    footer a i{
+        font-size: .85rem;
+    }
+}
+@media(max-width:380px){
+    html{
+        font-size: 75%;
+    }
+    section{
+        padding: 30px 3%;
+    }
+    header{
+        padding: 10px 3%;
+    }
+    .home{
+        grid-gap: 1.5em;
+    }
+    .home-content{
+        margin-top: 2rem;
+    }
+    .home-content h1{
+        font-size: var(--big-font);
+    }
+    .change-text{
+        font-size: .9rem;
+    }
+    .home-content p{
+        font-size: .8rem;
+    }
+    .img-box img{
+        max-width: 180px;
+    }
+    .liquid-shape{
+        width: 50%;
+        left: 25%;
+        top: 5%;
+    }
+    .about .img-about img{
+        max-width: 180px;
+    }
+    .about-content h3{
+        font-size: 1rem;
+    }
+    .about-content p{
+        font-size: .8rem;
+    }
+    .section-services .service-box{
+        padding: 1rem 0.6rem;
+    }
+    .service-box h3{
+        font-size: 1rem;
+    }
+    .service-box p{
+        font-size: .75rem;
+    }
+    .service-icon{
+        font-size: 1.5rem;
+        padding: .8rem;
+    }
+    .skill-main h3{
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+    }
+    .skill-left .skill-bar .info p{
+        font-size: .8rem;
+    }
+    .skill-bar .bar{
+        height: 8px;
+    }
+    .professional{
+        max-width: 250px;
+    }
+    .circle{
+        height: 75px;
+    }
+    .circle .points{
+        width: 3px;
+        height: 6px;
+        transform: rotate(calc(var(--i)*var(--rot))) translateY(-28px);
+    }
+    .box .text big{
+        font-size: .85rem;
+    }
+    .box .text small{
+        font-size: .75rem;
+    }
+    .portfolio-gallery{
+        gap: 0.8rem;
+    }
+    .port-box{
+        border-radius: 10px;
+    }
+    .port-content h3{
+        font-size: .9rem;
+    }
+    .port-content p{
+        font-size: .65rem;
+    }
+    .port-content a{
+        width: 35px;
+        height: 35px;
+    }
+    .port-content a i{
+        font-size: 1rem;
+    }
+    .contact form input,
+    .contact form textarea{
+        padding: .4rem;
+        font-size: .8rem;
+    }
+    .formBtn .btn{
+        font-size: .8rem;
+        height: 36px;
+    }
+    footer{
+        padding: 0.8rem 3%;
     }
     footer p{
         font-size: .6rem;
     }
-    .filter-buttons .btn{
+}
+@media(max-width:320px){
+    html{
+        font-size: 70%;
+    }
+    section{
+        padding: 25px 3%;
+    }
+    header{
+        padding: 8px 3%;
+    }
+    .logo{
+        font-size: 20px;
+    }
+    .home{
+        grid-gap: 1em;
+    }
+    .home-content{
+        margin-top: 1.5rem;
+    }
+    .home-content h1{
+        font-size: var(--big-font);
+    }
+    .change-text{
         font-size: .8rem;
     }
-    .img-about img{
-        width: 300px;
+    .home-content p{
+        font-size: .75rem;
     }
-    .info-about1,.info-about2,.info-about3{
-        display: none;
+    .img-box img{
+        max-width: 150px;
     }
-    .img-about p{
+    .liquid-shape{
+        width: 45%;
+        left: 27%;
+        top: 3%;
+    }
+    .about .img-about img{
+        max-width: 150px;
+    }
+    .about-content h2{
+        font-size: var(--normal-font);
+    }
+    .about-content h3{
+        font-size: .9rem;
+    }
+    .about-content p{
+        font-size: .75rem;
+        margin-bottom: .8rem;
+    }
+    .btn-box .btn{
+        height: 35px;
+        font-size: .8rem;
+    }
+    .social-icons{
+        max-width: 150px;
+        height: 30px;
+    }
+    .social-icons a{
+        width: 30px;
+    }
+    .social-icons a i{
+        font-size: .85rem;
+    }
+    .service-icon{
+        font-size: 1.3rem;
+        padding: .6rem;
+    }
+    .section-services .service-box{
+        padding: .8rem 0.5rem;
+    }
+    .service-box h3{
+        font-size: .9rem;
+    }
+    .service-box p{
+        font-size: .7rem;
+    }
+    .skill-main h3{
         font-size: 1rem;
     }
-
+    .professional{
+        max-width: 200px;
+    }
+    .circle{
+        height: 65px;
+    }
+    .circle .points{
+        width: 3px;
+        height: 5px;
+        transform: rotate(calc(var(--i)*var(--rot))) translateY(-24px);
+    }
+    .filter-buttons .button{
+        font-size: .7rem;
+        padding: 3px 8px;
+    }
+    .port-content h3{
+        font-size: .8rem;
+    }
+    .port-content p{
+        font-size: .6rem;
+    }
+    .contact form input,
+    .contact form textarea{
+        font-size: .75rem;
+        padding: .35rem;
+    }
+    .formBtn .btn{
+        font-size: .75rem;
+        height: 32px;
+    }
+    footer p{
+        font-size: .55rem;
+    }
+    footer a{
+        padding: .3rem;
+    }
+    footer a i{
+        font-size: .75rem;
+    }
 }
